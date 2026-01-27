@@ -49,7 +49,7 @@ const cardsData: InfoCard[] = [
 const Button : React.FC = () => {
   return (
     <button className="bg-yellow-300 pt-2 pl-3 pr-3 pb-2 flex gap-3 border border-yellow-300 rounded-lg items-center absolute top-40 right-5 hover:cursor-pointer">
-      <Image src={group} alt="User Group Icon" className="w-5 h-5 lg:w-6 h-6" />
+      <Image src={group} alt="User Group Icon" className="w-8 h-8" />
       <span className="text-black font-semibold">Subscribe</span>
     </button>
   )
@@ -69,12 +69,12 @@ export function OrganizerComponent() {
   };
 
   return (
-    <div className="p-10 ml-4 lg:ml-40 hidden lg:block">
+    <div className="p-10 pl-45 hidden lg:block bg-[#FFFBE9]">
         <div className="flex justify-start items-center gap-4 p-5 pb-10">
-            <h1 className="font-semibold md:text-4xl">Explore organizers</h1>
+            <h1 className="font-semibold md:text-4xl pl-3">Explore organizers</h1>
             <Image src={group} alt="User Group Icon" className="w-7 h-7 font-bold mt-2" />
         </div>
-        <section className="flex justify-center items-center gap-10 overflow-x-auto pl-75 mr-50 h-65" ref={cardsRef}>
+        <section className="flex justify-center items-center gap-10 overflow-x-auto h-65 pl-75 mr-50" ref={cardsRef}>
               {cardsData.map((card) => (
                 <div key={card.id} className="relative h-full">
                   <section className="absolute border-10 rounded-2xl bg-yellow-400 border-yellow-400 w-102 h-58 -left-2 top-2 z-0"></section>
