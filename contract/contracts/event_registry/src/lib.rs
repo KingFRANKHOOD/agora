@@ -35,7 +35,11 @@ impl EventRegistry {
         validate_address(&env, &admin)?;
         validate_address(&env, &platform_wallet)?;
 
-        let initial_fee = if platform_fee_percent == 0 { 500 } else { platform_fee_percent };
+        let initial_fee = if platform_fee_percent == 0 {
+            500
+        } else {
+            platform_fee_percent
+        };
 
         if initial_fee > 10000 {
             return Err(EventRegistryError::InvalidFeePercent);

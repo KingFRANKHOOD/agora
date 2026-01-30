@@ -96,7 +96,9 @@ pub fn get_event_registry(env: &Env) -> Address {
 }
 
 pub fn set_initialized(env: &Env, value: bool) {
-    env.storage().persistent().set(&DataKey::Initialized, &value);
+    env.storage()
+        .persistent()
+        .set(&DataKey::Initialized, &value);
 }
 
 pub fn is_initialized(env: &Env) -> bool {
